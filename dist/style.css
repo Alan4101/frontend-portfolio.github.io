@@ -7,6 +7,9 @@ h2 {
 a {
   text-decoration: none; }
 
+a:hover {
+  text-decoration: none !important; }
+
 .flex-r0 {
   display: flex;
   flex-direction: row;
@@ -28,7 +31,9 @@ a {
   padding: 5em 0; }
 
 .white-s {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
 
 .mg-t {
   margin-top: 3em; }
@@ -74,8 +79,8 @@ a {
   width: 60px;
   height: 60px;
   background: #000;
-  color: #00ffa1;
-  border: 2px solid #00ffa1;
+  color: #007443;
+  border: 2px solid #007443;
   border-radius: 50%;
   text-align: center;
   font-size: 28px;
@@ -87,7 +92,7 @@ a {
 
 .down:hover {
   color: #ffffff;
-  background: #00ffa1;
+  background: #007443;
   border: 2px solid #000;
   transition: 1s; }
 
@@ -118,11 +123,100 @@ a {
   border-color: #222 transparent transparent; }
 
 .work-content {
-  width: 100%; }
+  width: 100%;
+  padding: 3em 0; }
 
-.form-group input {
-  outline: none;
-  background: #ffffff; }
+.work-item figure {
+  text-align: center; }
+
+.work-item > figure > span {
+  font-size: 40px;
+  padding: 1em; }
+
+.form-group input, .form-group textarea {
+  background: #ffffff;
+  padding: 1em;
+  outline: none !important; }
+
+.form-group label {
+  padding: 0.5em;
+  color: #00868c; }
 
 .form-group input:active, .form-group:focus, .form-group {
   outline: none; }
+
+.bmd-label-floating {
+  top: 0 !important; }
+
+.is-focused input {
+  background: #ffffff; }
+
+form {
+  width: 700px;
+  max-width: 100%; }
+
+.desktop img {
+  max-width: 100%; }
+
+.block-project {
+  justify-content: space-between;
+  align-items: center; }
+
+.monitor {
+  width: 300px;
+  height: 220px;
+  background: #a6a6a6;
+  padding: 0.5em;
+  border-radius: 10px 10px 5px 5px; }
+
+.monitor img {
+  max-width: 100%; }
+
+.block-f {
+  height: 30px;
+  width: 50px;
+  background: #a6a6a6;
+  margin: 1px auto; }
+
+.block-s {
+  height: 10px;
+  width: 150px;
+  background: #a6a6a6;
+  margin: 1px auto; }
+
+.nav-panel ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+.nav-panel ul li {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  background: #000;
+  color: #007443;
+  border: 2px solid #007443;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  bottom: 1em;
+  outline: none;
+  justify-content: center;
+  align-items: center; }
+
+.nav-panel ul li:hover, .nav-panel ul li:active {
+  color: #ffffff;
+  background: #007443;
+  border: 2px solid #000;
+  transition: 1s; }
+
+.btn-detail {
+  width: 100px;
+  text-decoration: none;
+  display: block;
+  background: #007443;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom-right-radius: 20px;
+  border: 1px solid; }
