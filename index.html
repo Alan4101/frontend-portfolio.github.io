@@ -6,20 +6,158 @@
     <meta name="description" content="розбробка web сатів, верстка з psd">
     <meta name="keywords" content=" Frontend developer|js developer| портфоліо |Js| html css">
 
-    <script type="text/javascript" src="dist/bundle.js"></script>
-    <link rel='stylesheet' href='dist/style.css'>
+    <link rel='stylesheet' href='./dist/style.css'>
+    <link rel='stylesheet' href='./src/public/add.css'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <title>Front-end developer portfolio</title>
 </head>
 <body>
+<header id="home" style="display: none">
+    <nav class="nav-main">
+        <button class="nav-btn"></button>
+        <div class="wrapp-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-networks">
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--MAIN CONTENT-->
+<div class="container-fluid">
+    <div class="row">
+        <!--BANNER-->
+        <section class="banner">
+            <div class="banner-img">
+                <div class="text-title">
+                    <h1 class="text-show after">Hi, I`m Andrew. I build landing pages and corporate websites!</h1>
+                </div>
+                <button class="down"><i class="fas fa-angle-down"></i></button>
+            </div>
+        </section>
+        <!--ABOUT-->
+        <section id="about" class="white-s mg-t">
+            <div class="white-s-wrapper flex-c0">
+                <div class="title-s text-center">
+                    <h2>About</h2>
+                </div>
+                <div class="content">
 
+                </div>
+            </div>
+        </section>
+        <!--WORK-->
+        <section id="work-step" class="black-s">
+            <div class="black-s-wrapper flex-c0">
+                <div class="title-s text-center">
+                    <h2>Work</h2>
+                </div>
+                <div class="work-content flex-r0 flex-wrapp">
+                    <div class="col col-lg-3 col-md-3 col-sm-12">
+                        <figure>
+                            <span><i class="far fa-comments"></i></span>
+                            <figcaption>
+                                <h3>title</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-12">
+                        <figure>
+                            <span><i class="far fa-file-alt"></i></span>
+                            <figcaption>
+                                <h3>title</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-12">
+                        <figure>
+                            <span><i class="fab fa-free-code-camp"></i></span>
+                            <figcaption>
+                                <h3>title</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-12">
+                        <figure>
+                            <span><i class="far fa-thumbs-up"></i></span>
+                            <figcaption>
+                                <h3>title</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--PORTFOLIO-->
+        <section id="portfolio" class="mg-t">
+
+        </section>
+        <!--CONTACT-->
+        <section id="contact" class="black-s">
+            <div class="black-s-wrapper">
+                <div class="title-s text-center">
+                    <h2>contact</h2>
+                </div>
+                <div class="content container">
+                    <form name="contact" method="">
+                        <div class="form-group pd">
+                            <label for="forName" class="bmd-label-floating"><i class="far fa-user"></i>  Name</label>
+                            <input type="text" name="name" class="form-control" id="forName" pattern="[A-Z,a-z, ]*">
+                        </div>
+                        <div class="form-group bmd-form-group pd">
+                            <label for="forEmail" class="bmd-label-floating"> <i class="far fa-envelope"></i>  Email</label>
+                            <input type="email" name="email" class="form-control" id="forEmail">
+                        </div>
+                        <div class="form-group bmd-form-group pd">
+                            <label for="forPhone" class="bmd-label-floating"><i class="fas fa-mobile-alt"></i>  Phone</label>
+                            <input type="email" name="email" class="form-control" id="forPhone" pattern="-?[0-9]*(\.[0-9]+)?">
+                        </div>
+                        <div class="form-group bmd-form-group pd">
+                            <label for="forText" class="bmd-label-floating"><i class="fas fa-pencil-alt"></i> Your message</label>
+                            <textarea class="form-control" name="text" id="forText" cols="30" rows="10"></textarea>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!--FOOTER-->
+<footer class="">
+
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./dist/index.js"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 
 </body>
 </html>
+<!--
+//    "dev": "webpack --mode development",
+//    "build": "webpack --mode production"
+-->
