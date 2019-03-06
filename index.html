@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
     <title>Front-end developer portfolio</title>
 </head>
 <body>
-<header id="home" style="display: none">
+<header id="home" style="">
     <nav class="nav-main">
         <button class="nav-btn"></button>
         <div class="wrapp-nav">
@@ -30,10 +30,10 @@
         </div>
         <div class="social-networks">
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="http://facebook.com/andrew.tolochkevich"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="http://www.linkedin.com/in/andrew-tolochkevich-a598ba130"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://telegram.org/a_tolochkevich"><i class="fab fa-telegram"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -51,13 +51,55 @@
             </div>
         </section>
         <!--ABOUT-->
-        <section id="about" class="white-s mg-t">
+        <section id="about" class="white-s">
             <div class="white-s-wrapper flex-c0">
-                <div class="title-s text-center">
-                    <h2>About</h2>
-                </div>
-                <div class="content">
 
+                <div class="content cont-slider">
+                    <div class="swiper-container">
+                        <div class="title-s text-center">
+                            <h2>About</h2>
+                        </div>
+                        <div class="parallax-bg" style="background-image:url(src/public/img/timeline.jpg)" data-swiper-parallax="-23%"></div>
+                        <div class="swiper-wrapper container">
+                            <div class="swiper-slide">
+                                <div class="container">
+                                    <div class="subtitle">Hi, my name is Andrew and I Front-end developer. </div>
+                                    <!--<hr>-->
+                                    <div class="text">
+                                        <p>I have 2 years experience in web development.My main responsibilities is layout of new pages from PSD layouts
+                                            Adaptation of new and ready pages for mobile devices
+                                            Implementation of JavaScript logic (sliders, popups, animations, AJAX, etc.)
+                                            Integration of new modules into finished projects</p>
+                                    </div>
+                                    <div class="sub-context">
+                                        <ul>
+                                            <li><i class="fab fa-js"></i></li>
+                                            <li><i class="fab fa-css3-alt"></i></li>
+                                            <li><i class="fab fa-html5"></i></li>
+                                            <li><img src="src/public/img/icons8-jquery-filled-50.png"></li>
+                                            <li><i class="fab fa-node"></i></li>
+                                            <li><i class="fab fa-npm"></i></li>
+                                            <li><i class="fab fa-wordpress-simple"></i></li>
+                                            <li><i class="fab fa-adobe"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Slide 2</div>
+                                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                                <div class="text" data-swiper-parallax="-100">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination swiper-pagination-white"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-prev swiper-button-white "></div>
+                        <div class="swiper-button-next swiper-button-white "></div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,39 +110,44 @@
                     <h2>Work</h2>
                 </div>
                 <div class="work-content flex-r0 flex-wrapp">
-                    <div class="col col-lg-3 col-md-3 col-sm-12 work-item">
+                    <div class="col-lg-3 col-md-3 col-sm-12 work-item">
                         <figure>
                             <span><i class="far fa-comments"></i></span>
                             <figcaption>
                                 <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Aspernatur culpa cum cupiditate dicta est expedita. Aspernatur culpa cum cupiditate dicta est expedita.</p>
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col col-lg-3 col-md-3 col-sm-12 work-item">
+                    <div class="col-lg-3 col-md-3 col-sm-12 work-item">
                         <figure>
                             <span><i class="far fa-file-alt"></i></span>
                             <figcaption>
                                 <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.
+                                    Aspernatur culpa cum cupiditate dicta est expedita.
+                                </p>
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col col-lg-3 col-md-3 col-sm-12 work-item">
+                    <div class="col-lg-3 col-md-3 col-sm-12 work-item">
                         <figure>
                             <span><i class="fab fa-free-code-camp"></i></span>
                             <figcaption>
                                 <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita. Aspernatur culpa cum cupiditate dicta est expedita.</p>
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col col-lg-3 col-md-3 col-sm-12 work-item">
+                    <div class="col-lg-3 col-md-3 col-sm-12 work-item">
                         <figure>
                             <span><i class="far fa-thumbs-up"></i></span>
                             <figcaption>
                                 <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Aspernatur culpa cum cupiditate dicta est expedita.
+                                    Aspernatur culpa cum cupiditate dicta est expedita.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -108,25 +155,23 @@
             </div>
         </section>
         <!--PORTFOLIO-->
-        <section id="portfolio" class=" white-s mg-t">
-            <div class="white-s-wrapper flex-c0">
+        <section id="portfolio" class=" white-s w-s">
+            <div class="white-s-wrapper w-sw flex-c0">
                 <div class="title-s text-center">
                     <h2>Portfolio</h2>
                 </div>
                 <div class="content flex-r0 flex-wrapp" >
-                    <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp mg-t">
+                    <div class="col-lg-6 col-md-12 col-sm-12 flex-r0 flex-wrapp mg-t">
                         <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp">
                             <div class="block-project flex-c0">
                                 <div class="project">
                                     <div class="desktop">
                                         <div class="monitor">
-                                            <img src="src/public/img/banner.jpg" alt="">
+                                            <img src="src/public/img/site-b.jpg" alt="">
                                         </div>
                                         <div class="block-f"></div>
                                         <div class="block-s"></div>
                                     </div>
-                                    <div class="tablet"></div>
-                                    <div class="phone"></div>
                                 </div>
                                 <div class="nav-panel">
                                     <ul>
@@ -156,19 +201,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp mg-t">
+                    <div class="col-lg-6 col-md-12 col-sm-12 flex-r0 flex-wrapp mg-t">
                         <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp">
                             <div class="block-project flex-c0">
                                 <div class="project">
                                     <div class="desktop">
                                         <div class="monitor">
-                                            <img src="src/public/img/banner.jpg" alt="">
+                                            <img src="src/public/img/site-b.jpg" alt="">
                                         </div>
                                         <div class="block-f"></div>
                                         <div class="block-s"></div>
                                     </div>
-                                    <div class="tablet"></div>
-                                    <div class="phone"></div>
                                 </div>
                                 <div class="nav-panel">
                                     <ul>
@@ -198,19 +241,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp mg-t">
+                    <div class="col-lg-6 col-md-12 col-sm-12 flex-r0 flex-wrapp mg-t">
                         <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp">
                             <div class="block-project flex-c0">
                                 <div class="project">
                                     <div class="desktop">
                                         <div class="monitor">
-                                            <img src="src/public/img/banner.jpg" alt="">
+                                            <img src="src/public/img/site-b.jpg" alt="">
                                         </div>
                                         <div class="block-f"></div>
                                         <div class="block-s"></div>
                                     </div>
-                                    <div class="tablet"></div>
-                                    <div class="phone"></div>
                                 </div>
                                 <div class="nav-panel">
                                     <ul>
@@ -240,19 +281,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp mg-t">
+                    <div class="col-lg-6 col-md-12 col-sm-12 flex-r0 flex-wrapp mg-t">
                         <div class="col-lg-6 col-md-6 col-sm-12 flex-r0 flex-wrapp">
                             <div class="block-project flex-c0">
                                 <div class="project">
                                     <div class="desktop">
                                         <div class="monitor">
-                                            <img src="src/public/img/banner.jpg" alt="">
+                                            <img src="src/public/img/site-b.jpg" alt="">
                                         </div>
                                         <div class="block-f"></div>
                                         <div class="block-s"></div>
                                     </div>
-                                    <div class="tablet"></div>
-                                    <div class="phone"></div>
                                 </div>
                                 <div class="nav-panel">
                                     <ul>
@@ -309,7 +348,9 @@
                             <label for="forText" class="bmd-label-floating"><i class="fas fa-pencil-alt"></i> Your message</label>
                             <textarea class="form-control" name="text" id="forText" cols="30" rows="10"></textarea>
                         </div>
-                        <button id="send_message" type="button" class="">Send  </button>
+                        <div class="cont-block">
+                            <button id="send_message" type="button" class="btn-m">Send  </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -317,10 +358,23 @@
     </div>
 </div>
 <!--FOOTER-->
-<footer class="container-fluid">
-
+<footer class="">
+    <div class="container-fluid footer-wrapp flex-r0 flex-wrapp ">
+        <div class="col-lg-6 col-md-6 col-sm-12  text-center">
+            <h5>Contact with me</h5>
+            <hr>
+            <ul class="footer-contact ">
+                <li><a href="tel:+380631489639"><i style="margin: 3px;" class="fas fa-mobile-alt"></i> 063 14 89 693</a></li>
+                <li><a href="mailto:andriy410tolochkevitch@gmail.com"><i  class="far fa-envelope"></i> andriy410tolochkevitch@gmail.com</a></li>
+                <li><i style="margin: 2px;" class="fas fa-map-marker-alt"></i> Ukraine, Lviv</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 flex-c0 dev text-center">
+            <h5>Developer by <br>Andrew Tolochkevich</h5>
+        </div>
+    </div>
 </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
