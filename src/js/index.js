@@ -106,3 +106,57 @@ let swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+var isScrolling = false;
+
+window.addEventListener("scroll", throttleScroll, false);
+
+function throttleScroll(e) {
+    if (isScrolling == false) {
+        window.requestAnimationFrame(function() {
+            scrolling(e);
+            isScrolling = false;
+        });
+    }
+    isScrolling = true;
+}
+document.addEventListener("DOMContentLoaded", scrolling, false);
+
+const listItems = document.querySelector(".content-portfolio");
+const workLists = document.querySelector('.work-content');
+
+function scrolling() {
+    for (let i = 0; i < 4; i++) {
+        let listItem = listItems.children[i];
+        let workItem = workLists.children[i];
+
+        if (isPartiallyVisible(listItem) || isPartiallyVisible(workItem)) {
+            listItem.classList.add("slideInLeft");
+            workItem.classList.add("slideInRight");
+
+        } else {
+            listItem.classList.remove("slideInLeft");
+            workItem.classList.remove("slideInRight");
+        }
+    }
+}
+
+function isPartiallyVisible(el) {
+    var elementBoundary = el.getBoundingClientRect();
+
+    var top = elementBoundary.top;
+    var bottom = elementBoundary.bottom;
+    var height = elementBoundary.height;
+
+    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+}
+
+function isFullyVisible(el) {
+    var elementBoundary = el.getBoundingClientRect();
+
+    var top = elementBoundary.top;
+    var bottom = elementBoundary.bottom;
+
+    return ((top >= 0) && (bottom <= window.innerHeight));
+}
+
