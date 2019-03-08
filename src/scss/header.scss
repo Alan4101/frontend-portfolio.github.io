@@ -1,4 +1,263 @@
+//preloader
+
+$loaderColor: #B9E9BB;
+$bodyColor: #1D1F20;
+
+$animSpeed: 1.4s;
+$loaderAnim: $animSpeed linear infinite;
+$pseudoAnim: $animSpeed 0.2s ease infinite;
+$animBtnSpeed: $animSpeed 0.2s linear;
+
+@mixin anim {
+  $name: unique-id();
+  animation-name: $name;
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin animbtn{
+  $name: unique_id();
+  animation-name: $name;
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin jump($direction: right) {
+  $t: null;
+  $r: null;
+
+  @if $direction == left {
+    $t: -200%, -100%;
+    $r: -180;
+  }
+  @else {
+    $t: 200%, 100%;
+    $r: 180;
+  }
+
+  65% {
+    transform:
+            translate($t)
+            scale(0.2)
+            rotate($r * 1deg);
+    background-color: lighten($loaderColor, 20%);
+  }
+  70%, 100% {
+    transform:
+            translate(0, 0)
+            scale(1)
+            rotate($r + $r * 1deg);
+    background-color: darken($loaderColor, 20%);
+  }
+}
+
+@mixin spin($r) {
+  20% {
+    transform:
+            rotate(-30deg)
+            scale(1);
+  }
+  50% {
+    transform:
+            rotate($r * 1deg / 2)
+            scale(4);
+    background-color: lighten($loaderColor, 40%);
+  }
+  80% {
+    transform:
+            rotate($r * 1deg)
+            scale(0.8);
+  }
+  90%, 100% {
+    transform:
+            rotate($r * 1deg)
+            scale(1);
+    background-color: $loaderColor;
+  }
+}
+
+.loaderArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $bodyColor;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;
+}
+
+// Loader
+.loader {
+  position: relative;
+  background-color: $loaderColor;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  animation: $loaderAnim;
+
+  @include anim {
+    @include spin(720);
+  }
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: darken($loaderColor, 20%);
+    border-radius: 3px;
+  }
+
+  &:before {
+    right: calc(100% + 2px);
+    animation: $pseudoAnim;
+    @include anim {
+      @include jump(left);
+    }
+  }
+
+  &:after {
+    left: calc(100% + 2px);
+    animation: $pseudoAnim;
+    @include anim {
+      @include jump(right);
+    }
+  }
+}
+//
+@mixin btnSpin($el){
+  20%{
+    transform:
+      rotate($el*3deg)
+      scale(0.9);
+  }
+  50%{
+    transform:
+      rotate($el*6deg)
+      scale(-0.8);
+  }
+  80%{
+    transform:
+      rotate($el*9deg)
+      scale(0.8);
+  }
+  90%, 100%{
+    transform:
+      rotate($el*12deg)
+      scale(1);
+  }
+}
+@mixin t(){
+  30%{transform: rotate(0deg);}
+  60%{transform: rotate(45deg);}
+  100%{transform: rotate(90deg);}
+}
+.anim-vert{
+  animation: $animBtnSpeed;
+  @include animbtn{
+    @include t()
+  }
+}
+.animationbtn{
+  animation: $animBtnSpeed;
+  @include animbtn{
+    @include btnSpin(30)
+  }
+}
+.ul-list{opacity: 0;}
 header{
   position: absolute;
+  z-index: 99;
+  .nav-main{
+    position: relative;
+    margin-right: -15px;
+    margin-left: -15px;
+    .social-networks{
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin:1em;
+      ul{
+        list-style-type: none;
+        li{
+          display: inline-flex;
+          justify-content: space-between;
+          margin: 1em;
+          a{
+            font-size: 35px;
+            &:hover{
+              color: #fff;
+            }
+          }
+        }
+      }
 
+    }
+    .nav-btn{
+      display: flex;
+      flex-direction: row;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      background: transparent;
+      margin: 1em;
+      .vert{
+        display: flex;
+        flex-direction: column;
+        span{
+          display: block;
+          width: 10px;
+          height: 10px;
+          margin: 6px 7px;
+          background: #000;
+          border-radius: 50%;
+          border:1px solid #19a279;
+        }
+      }
+    }
+    .wrapp-nav{
+      position: relative;
+      ul{
+        padding-left: 12px;
+        width: 350px;
+        max-width: 100%;
+        list-style-type: none;
+
+        li{
+          width: 0;
+          margin: 0;
+          padding: 1em;
+          background: transparent;
+          border-bottom:1px solid transparent;
+
+          &:hover{
+            width: 100%;
+            transition: width 0.1s ;
+            background: rgba(0,0,0,.5);
+            border-bottom:1px solid #19a279;
+          }
+          &:hover a{
+            color: #19a279;
+          }
+          a{
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+.active{
+  color: #fff;
 }

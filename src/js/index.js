@@ -1,5 +1,16 @@
 console.log('index');
-
+const desktop_btn = document.querySelectorAll('.desktop-i');
+const tablet_btn = document.querySelectorAll('.tablet-i');
+const phone_btn = document.querySelectorAll('.phone-i');
+const d_b = document.querySelectorAll('.desktop');
+const p = document.querySelector('#portfolio');
+const listItems = document.querySelector(".content-portfolio");
+const workLists = document.querySelector('.work-content');
+const textLists = document.querySelector('.text-animated');
+const btnDown = document.querySelector('#btnDown');
+const btnUp = document.querySelector('#btnUp');
+const navBtn = document.querySelector('#navBtn');
+const navList = document.querySelectorAll('.wrapp-nav ul li');
 
 let textShow = ()=>{
     let str = String();
@@ -16,12 +27,6 @@ let textShow = ()=>{
     },100);
 };
 
-const desktop_btn = document.querySelectorAll('.desktop-i');
-const tablet_btn = document.querySelectorAll('.tablet-i');
-const phone_btn = document.querySelectorAll('.phone-i');
-const d_b = document.querySelectorAll('.desktop');
-const p = document.querySelector('#portfolio');
-
 d_b.forEach((el, i)=>{el.setAttribute('data-number',i)});
 
 function setDataNumber(el, el1, el2) {
@@ -29,6 +34,7 @@ function setDataNumber(el, el1, el2) {
     el1.forEach((el, i)=> el.setAttribute('data-number',i+'t'));
     el2.forEach((el, i)=> el.setAttribute('data-number',i+'p'));
 }
+
 function desktop(el) {
     var t = parseInt(el);
     d_b.forEach( w =>{
@@ -39,12 +45,12 @@ function desktop(el) {
             w.children[0].style.transform = 'rotate(0deg)';
             w.children[0].classList.remove('phone');
             w.children[0].classList.remove('tablet');
-
         }
 
     });
 
 }
+
 function tablet(el) {
     var t = parseInt(el);
     d_b.forEach( w =>{
@@ -59,6 +65,7 @@ function tablet(el) {
         }
     });
 }
+
 function phone(el) {
     var t = parseInt(el);
     d_b.forEach( w =>{
@@ -79,6 +86,7 @@ function phone(el) {
         }
     });
 }
+
 p.addEventListener('click', (e)=>{
     var o = e.target.getAttribute('data-number');
 
@@ -89,8 +97,8 @@ p.addEventListener('click', (e)=>{
     }
 });
 
-
 setDataNumber(desktop_btn, tablet_btn, phone_btn);
+
 textShow();
 
 // Params
@@ -107,7 +115,8 @@ let swiper = new Swiper('.swiper-container', {
     },
 });
 
-var isScrolling = false;
+let isScrolling = false;
+let flag = true;
 
 window.addEventListener("scroll", throttleScroll, false);
 
@@ -120,12 +129,18 @@ function throttleScroll(e) {
     }
     isScrolling = true;
 }
+
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
-const listItems = document.querySelector(".content-portfolio");
-const workLists = document.querySelector('.work-content');
-
 function scrolling() {
+    for (let i = 0; i<3; i++) {
+        let textL = textLists.children[i];
+        if(i&1){
+            isPartiallyVisible(textL)?textL.classList.add('slideInLeft'):textL.classList.remove('slideInLeft');
+        }else {
+            isPartiallyVisible(textL)? textL.classList.add('slideInRight'): textL.classList.remove('slideInRight');
+        }
+    }
     for (let i = 0; i < 4; i++) {
         let listItem = listItems.children[i];
         let workItem = workLists.children[i];
@@ -159,4 +174,74 @@ function isFullyVisible(el) {
 
     return ((top >= 0) && (bottom <= window.innerHeight));
 }
+
+function scrollDown() {
+    let  windowCoords = document.documentElement.clientHeight;
+    (function scroll() {
+        if (window.pageYOffset < windowCoords) {
+            window.scrollBy(0, 10);
+            setTimeout(scroll, 0);
+        }
+        if (window.pageYOffset > windowCoords) {
+            window.scrollTo(0, windowCoords);
+        }
+    })();
+}
+
+function scrollUp() {
+    (function scroll () {
+        if(window.pageYOffset > 0){
+            window.scrollBy(0, -10);
+            setTimeout(scroll,0);
+        }
+    })();
+}
+
+let showBtnUp = ()=>{
+    const wCord = document.documentElement.clientHeight;
+    return window.pageYOffset>wCord?btnUp.classList.add('show'):btnUp.classList.remove('show');
+};
+
+window.addEventListener('scroll', showBtnUp);
+
+btnUp.addEventListener('click',scrollUp);
+
+btnDown.addEventListener('click', scrollDown);
+
+function navListAnimation(f) {
+    if(f){
+        navList.forEach((el,i)=>{
+            setTimeout(()=>{
+                el.classList.remove('slideOutLeft');
+                el.classList.add('animated','slideInLeft');
+            },i*150);
+        });
+    }else{
+        navList.forEach((el,i)=>{
+            setTimeout(()=>{
+                el.classList.add('animated','slideOutLeft');
+                el.classList.remove('slideInLeft');
+            },i*50);
+        });
+    }
+
+}
+
+navBtn.addEventListener('click',()=>{
+    let t = navList[0].parentNode;
+
+    if(flag){
+        setTimeout(()=> t.style.opacity = '1' ,800);
+        navBtn.classList.add('animationbtn');
+       navListAnimation(flag);
+
+       flag = false;
+   }else {
+       navBtn.classList.remove('animationbtn');
+       navListAnimation(flag);
+        flag = true;
+        setTimeout(()=> t.style.opacity = '0' ,700);
+
+    }
+});
 

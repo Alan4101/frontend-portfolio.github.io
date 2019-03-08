@@ -3,7 +3,8 @@
 $base-font: 'Roboto';
 $title-padding: 3em;
 $c-w: #ffffff;
-$color-aq: #007443;
+$color-aq: #19a279;
+
 
 section, div, a, li , input, textarea, label{
   outline: none !important;
@@ -66,11 +67,11 @@ ul {
 .banner-img{
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items:center;
 
 }
 .text-title{
-  margin-bottom: 25em;
+  //margin-bottom: 25em;
   width: 800px;
   max-width: 100%;
 }
@@ -421,6 +422,20 @@ footer h5{
     //margin: 0 auto;
   }
 }
+.bnt-up{
+  position: fixed;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  bottom: 10px;
+  font-size: 35px;
+  padding: 0;
+  z-index: 9999;
+  opacity: 0;
+}
+.show{
+  opacity: 1;
+}
 @media (min-width: 320px) and (max-width: 1024px){
   .content>div.col-md-12{
     flex: 0 0 100%;
@@ -430,7 +445,20 @@ footer h5{
 @media (min-width: 320px) and (max-width: 768px){
   .nav-panel{ margin: 3em 0;}
   .black-s-wrapper:after{bottom: 20px;}
+  .swiper-container .swiper-slide{padding: 0;}
+  .ul-list{
+    background: rgba(0,0,0,0.8);
+  }
+  .social-networks {
+    margin: 0 !important;
+
+    ul li{
+      margin:0.2em !important;
+    }
+  }
+
 }
+
 
 
 

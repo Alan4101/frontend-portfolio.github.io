@@ -18,11 +18,24 @@
     <title>Front-end developer portfolio</title>
 </head>
 <body>
-<header id="home" style="">
+<div class="loaderArea">
+    <div class="loader"></div>
+</div>
+<!--<div class="preloader"></div>-->
+<header id="home" class="container-fluid">
     <nav class="nav-main">
-        <button class="nav-btn"></button>
+        <button id="navBtn" class="nav-btn">
+            <span class="vert">
+                <span></span>
+                <span></span>
+            </span>
+            <span class="vert">
+                <span></span>
+                <span></span>
+            </span>
+        </button>
         <div class="wrapp-nav">
-            <ul>
+            <ul class="ul-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -48,7 +61,7 @@
                 <div class="text-title">
                     <h1 class="text-show after">Hi, I`m Andrew. I build landing pages and corporate websites!</h1>
                 </div>
-                <button class="down"><i class="fas fa-angle-down"></i></button>
+                <button id="btnDown" class="down animated zoomInDown"><i class="fas fa-angle-down"></i></button>
             </div>
         </section>
         <!--ABOUT-->
@@ -63,16 +76,16 @@
                         <div class="parallax-bg" style="background-image:url(src/public/img/timeline.jpg)" data-swiper-parallax="-23%"></div>
                         <div class="swiper-wrapper container">
                             <div class="swiper-slide">
-                                <div class="container">
-                                    <div class="subtitle">Hi, my name is Andrew and I Front-end developer. </div>
+                                <div class="container text-animated">
+                                    <div class="subtitle animated">Hi, my name is Andrew and I Front-end developer. </div>
                                     <!--<hr>-->
-                                    <div class="text">
+                                    <div class="text animated">
                                         <p>I have 2 years experience in web development.My main responsibilities is layout of new pages from PSD layouts
                                             Adaptation of new and ready pages for mobile devices
                                             Implementation of JavaScript logic (sliders, popups, animations, AJAX, etc.)
                                             Integration of new modules into finished projects</p>
                                     </div>
-                                    <div class="sub-context">
+                                    <div class="sub-context animated">
                                         <ul>
                                             <li><i class="fab fa-js"></i></li>
                                             <li><i class="fab fa-css3-alt"></i></li>
@@ -358,6 +371,7 @@
         </section>
     </div>
 </div>
+<button id="btnUp" class="btn-m bnt-up"><i class="fas fa-angle-up"></i></button>
 <!--FOOTER-->
 <footer class="">
     <div class="container-fluid footer-wrapp flex-r0 flex-wrapp ">
@@ -377,6 +391,8 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="src/public/script.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
