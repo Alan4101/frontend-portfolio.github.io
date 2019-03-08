@@ -1,4 +1,3 @@
-console.log('index');
 const desktop_btn = document.querySelectorAll('.desktop-i');
 const tablet_btn = document.querySelectorAll('.tablet-i');
 const phone_btn = document.querySelectorAll('.phone-i');
@@ -11,7 +10,7 @@ const btnDown = document.querySelector('#btnDown');
 const btnUp = document.querySelector('#btnUp');
 const navBtn = document.querySelector('#navBtn');
 const navList = document.querySelectorAll('.wrapp-nav ul li');
-
+//text "hi i`m andrew"
 let textShow = ()=>{
     let str = String();
     let block = document.querySelector('.text-show');
@@ -26,15 +25,15 @@ let textShow = ()=>{
         }else { block.classList.remove('after'); }
     },100);
 };
-
+//data - attr for desktop item in portfolio section
 d_b.forEach((el, i)=>{el.setAttribute('data-number',i)});
-
+//data -attr for select button like: desktop, tablet, phone
 function setDataNumber(el, el1, el2) {
     el.forEach((el, i)=> el.setAttribute('data-number',i+'d'));
     el1.forEach((el, i)=> el.setAttribute('data-number',i+'t'));
     el2.forEach((el, i)=> el.setAttribute('data-number',i+'p'));
 }
-
+//functions for select view in portfolio item
 function desktop(el) {
     var t = parseInt(el);
     d_b.forEach( w =>{
@@ -100,8 +99,7 @@ p.addEventListener('click', (e)=>{
 setDataNumber(desktop_btn, tablet_btn, phone_btn);
 
 textShow();
-
-// Params
+//swipe slider
 let swiper = new Swiper('.swiper-container', {
     speed: 600,
     parallax: true,
@@ -117,7 +115,7 @@ let swiper = new Swiper('.swiper-container', {
 
 let isScrolling = false;
 let flag = true;
-
+//scroll animations
 window.addEventListener("scroll", throttleScroll, false);
 
 function throttleScroll(e) {
@@ -174,7 +172,7 @@ function isFullyVisible(el) {
 
     return ((top >= 0) && (bottom <= window.innerHeight));
 }
-
+// scroll at one window
 function scrollDown() {
     let  windowCoords = document.documentElement.clientHeight;
     (function scroll() {
@@ -187,7 +185,7 @@ function scrollDown() {
         }
     })();
 }
-
+//button scroll up
 function scrollUp() {
     (function scroll () {
         if(window.pageYOffset > 0){
@@ -207,7 +205,7 @@ window.addEventListener('scroll', showBtnUp);
 btnUp.addEventListener('click',scrollUp);
 
 btnDown.addEventListener('click', scrollDown);
-
+//header nav
 function navListAnimation(f) {
     if(f){
         navList.forEach((el,i)=>{

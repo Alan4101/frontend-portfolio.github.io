@@ -1,5 +1,4 @@
 //preloader
-
 $loaderColor: #B9E9BB;
 $bodyColor: #1D1F20;
 
@@ -131,7 +130,7 @@ $animBtnSpeed: $animSpeed 0.2s linear;
     }
   }
 }
-//
+
 @mixin btnSpin($el){
   20%{
     transform:

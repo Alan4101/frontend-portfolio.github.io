@@ -54,66 +54,66 @@ ul {
 }
 .pd{
   padding: 1em 0;
+  input{
+    outline: none;
+  }
 }
-.pd input{
-  outline: none;
-}
-
-
 //BANNER
 .banner{
   position: relative;
-}
-.banner-img{
-  display: flex;
-  justify-content: center;
-  align-items:center;
+    .banner-img{
+      display: flex;
+      justify-content: center;
+      align-items:center;
 
-}
-.text-title{
-  //margin-bottom: 25em;
-  width: 800px;
-  max-width: 100%;
-}
-.text-show{
-  color: $c-w;
-  text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.46);
-  font-weight: bold;
-  position: relative;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  word-wrap: break-word;
-  letter-spacing: 2px;
-  float: left;
+      .text-title{
+        width: 800px;
+        max-width: 100%;
+        .text-show{
+          color: $c-w;
+          text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.46);
+          font-weight: bold;
+          position: relative;
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          word-wrap: break-word;
+          letter-spacing: 2px;
+          float: left;
+        }
+      }
+
+      .down{
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: #000;
+        color: $color-aq;
+        border:2px solid $color-aq;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 28px;
+        bottom: 1em;
+        outline: none;
+        &:active, &:focus{
+          outline: none;
+        }
+        &:hover{
+          color: $c-w;
+          background: $color-aq;
+          border: 2px solid #000;
+          transition: 1s;
+        }
+      }
+
+    }
 }
 .after:after{
   content: "|";
   color: $c-w;
 }
-.down{
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 60px;
-  background: #000;
-  color: $color-aq;
-  border:2px solid $color-aq;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  bottom: 1em;
-  outline: none;
-}
-.down:active, .down:focus{
-  outline: none;
-}
-.down:hover{
-  color: $c-w;
-  background: $color-aq;
-  border: 2px solid #000;
-  transition: 1s;
-}
+
 //section about
 .swiper-container>.title-s{
   position: relative;
@@ -171,13 +171,10 @@ ul {
 }
 .work-item figure{
   text-align: center;
-}
-.work-item figure>figcaption{
-
-}
-.work-item>figure>span{
-  font-size: 40px;
-  padding: 1em;
+    span{
+      font-size: 40px;
+      padding: 1em;
+    }
 }
 //contact
 .form-group input, .form-group textarea{
@@ -260,6 +257,7 @@ form{
   outline: none;
   justify-content: center;
   align-items: center;
+
 }
 .nav-panel ul li:hover, .nav-panel ul li:active{
   color: $c-w;
@@ -278,7 +276,6 @@ form{
   text-align: center;
   border-bottom-right-radius: 20px;
   border: 1px solid;
-  //border-top-right-radius: 20px;
 }
 .btn-load, .btn-m{
   margin: 1em auto;
@@ -293,10 +290,10 @@ form{
 .tablet{
   border-radius: 20px ;
   text-align: center;
-}
-.tablet>img{
-  height: 280px;
-  margin: -2.3em;
+  img{
+    height: 280px;
+    margin: -2.3em;
+  }
 }
 .phone>img, .tablet>img{
   border-radius: 20px;
@@ -305,9 +302,9 @@ form{
   width: 167px;
   height: 280px;
   border-radius: 20px ;
-}
-.phone>img{
-  height: 255px;
+    img{
+      height: 255px;
+    }
 }
 //footer
 footer{
@@ -318,35 +315,33 @@ footer{
   margin-top: -200px ;
   color: $c-w;
   overflow: hidden;
-
-}
-.footer-wrapp{
-  background: #313131;
-  width: 100%;
-}
-.footer-wrapp:before{
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  //margin-top: 3em;
-  border-style: solid;
-  top: -38px;
-  border-width: 31px 0 220px 2200px;
-  border-color: transparent transparent #313131;
-}
-footer h5{
-  text-transform: uppercase;
-  margin: 1em;
+  h5{
+    text-transform: uppercase;
+    margin: 1em;
+  }
+  .footer-wrapp{
+    background: #313131;
+    width: 100%;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      top: -38px;
+      border-width: 31px 0 220px 2200px;
+      border-color: transparent transparent #313131;
+    }
+  }
 }
 .footer-contact{
   padding-left:0 ;
   list-style-type: none;
+    li{
+      margin: 5px;
+      a{ color: $c-w;}
+    }
 }
-.footer-contact li{ margin: 5px;}
-.footer-contact li a{ color: $c-w;}
-
-
 .dev{align-items: center;}
 
 //slider
