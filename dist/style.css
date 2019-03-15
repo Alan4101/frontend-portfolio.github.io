@@ -19,9 +19,9 @@
   height: 12px;
   border-radius: 3px;
   animation: 1.4s linear infinite;
-  animation-name: u005dbed4; }
+  animation-name: ud160b6a4; }
 
-@keyframes u005dbed4 {
+@keyframes ud160b6a4 {
   20% {
     transform: rotate(-30deg) scale(1); }
   50% {
@@ -42,9 +42,9 @@
   .loader:before {
     right: calc(100% + 2px);
     animation: 1.4s 0.2s ease infinite;
-    animation-name: u543b2181; }
+    animation-name: u62d786c5; }
 
-@keyframes u543b2181 {
+@keyframes u62d786c5 {
   65% {
     transform: translate(-200%, -100%) scale(0.2) rotate(-180deg);
     background-color: white; }
@@ -54,9 +54,9 @@
   .loader:after {
     left: calc(100% + 2px);
     animation: 1.4s 0.2s ease infinite;
-    animation-name: u94eabad1; }
+    animation-name: ud1b21418; }
 
-@keyframes u94eabad1 {
+@keyframes ud1b21418 {
   65% {
     transform: translate(200%, 100%) scale(0.2) rotate(180deg);
     background-color: white; }
@@ -66,9 +66,9 @@
 
 .anim-vert {
   animation: 1.4s 0.2s linear;
-  animation-name: u0b78edb2; }
+  animation-name: u9ac8ad1e; }
 
-@keyframes u0b78edb2 {
+@keyframes u9ac8ad1e {
   30% {
     transform: rotate(0deg); }
   60% {
@@ -78,9 +78,9 @@
 
 .animationbtn {
   animation: 1.4s 0.2s linear;
-  animation-name: u08c781a5; }
+  animation-name: u1304544a; }
 
-@keyframes u08c781a5 {
+@keyframes u1304544a {
   20% {
     transform: rotate(90deg) scale(0.9); }
   50% {
@@ -558,6 +558,10 @@ footer {
     max-width: 100%; } }
 
 @media (min-width: 320px) and (max-width: 768px) {
+  .sub-context {
+    margin-bottom: 5em; }
+  .swiper-pagination {
+    display: none; }
   .nav-panel {
     margin: 3em 0; }
   .black-s-wrapper:after {

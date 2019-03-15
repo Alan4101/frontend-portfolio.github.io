@@ -438,6 +438,8 @@ footer{
   }
 }
 @media (min-width: 320px) and (max-width: 768px){
+  .sub-context{margin-bottom: 5em;}
+  .swiper-pagination{display: none;}
   .nav-panel{ margin: 3em 0;}
   .black-s-wrapper:after{bottom: 20px;}
   .swiper-container .swiper-slide{padding: 0;}
