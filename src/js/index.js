@@ -1,3 +1,5 @@
+import { Message} from "./message";
+
 const desktop_btn = document.querySelectorAll('.desktop-i');
 const tablet_btn = document.querySelectorAll('.tablet-i');
 const phone_btn = document.querySelectorAll('.phone-i');
@@ -11,6 +13,7 @@ const btnUp = document.querySelector('#btnUp');
 const navBtn = document.querySelector('#navBtn');
 const navList = document.querySelectorAll('.wrapp-nav ul li');
 //text "hi i`m andrew"
+
 let textShow = ()=>{
     let str = String();
     let block = document.querySelector('.text-show');
@@ -45,9 +48,7 @@ function desktop(el) {
             w.children[0].classList.remove('phone');
             w.children[0].classList.remove('tablet');
         }
-
     });
-
 }
 
 function tablet(el) {
@@ -131,7 +132,7 @@ function throttleScroll(e) {
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function scrolling() {
-    for (let i = 0; i<3; i++) {
+    for (let i = 0; i<2; i++) {
         let textL = textLists.children[i];
         if(i&1){
             isPartiallyVisible(textL)?textL.classList.add('slideInLeft'):textL.classList.remove('slideInLeft');
@@ -199,6 +200,36 @@ let showBtnUp = ()=>{
     const wCord = document.documentElement.clientHeight;
     return window.pageYOffset>wCord?btnUp.classList.add('show'):btnUp.classList.remove('show');
 };
+
+document.getElementById('send_message').addEventListener('click', validate);
+
+function validate() {
+    let d = document;
+    let form =  d.forms.contact;
+    // console.log(form.name.value);
+    if(form.name.value == '' && form.email.value == '' && form.phone.value =='' && form.text.value ==''){
+            Message("Error","The filds empty", true);
+    }else if(form.name.value == '' || form.email.value == '' || form.phone.value =='' || form.text.value ==''){
+        Message('Error', `The field is empty!`, true);
+    }else if(form.text.value.length < 15){
+        Message('Problem!', 'The field message must have minimum 15 symbol', true);
+    }else {
+        Message('Success!', 'Message send');
+        reset(form);
+    }
+}
+function reset(form) {
+    form.reset();
+}
+document.querySelector('#forPhone').onkeypress = function (e) {
+    e = e || window.event;
+    if(e.charCode && (e.charCode < 48 || e.charCode > 57)){
+        return false;
+    }
+};
+
+
+
 
 window.addEventListener('scroll', showBtnUp);
 

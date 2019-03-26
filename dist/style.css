@@ -1,169 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);.loaderArea {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #1D1F20;
-  overflow: hidden;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100000; }
-
-.loader {
-  position: relative;
-  background-color: #B9E9BB;
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  animation: 1.4s linear infinite;
-  animation-name: ud160b6a4; }
-
-@keyframes ud160b6a4 {
-  20% {
-    transform: rotate(-30deg) scale(1); }
-  50% {
-    transform: rotate(360deg) scale(4);
-    background-color: white; }
-  80% {
-    transform: rotate(720deg) scale(0.8); }
-  90%, 100% {
-    transform: rotate(720deg) scale(1);
-    background-color: #B9E9BB; } }
-  .loader:before, .loader:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #6bd170;
-    border-radius: 3px; }
-  .loader:before {
-    right: calc(100% + 2px);
-    animation: 1.4s 0.2s ease infinite;
-    animation-name: u62d786c5; }
-
-@keyframes u62d786c5 {
-  65% {
-    transform: translate(-200%, -100%) scale(0.2) rotate(-180deg);
-    background-color: white; }
-  70%, 100% {
-    transform: translate(0, 0) scale(1) rotate(-360deg);
-    background-color: #6bd170; } }
-  .loader:after {
-    left: calc(100% + 2px);
-    animation: 1.4s 0.2s ease infinite;
-    animation-name: ud1b21418; }
-
-@keyframes ud1b21418 {
-  65% {
-    transform: translate(200%, 100%) scale(0.2) rotate(180deg);
-    background-color: white; }
-  70%, 100% {
-    transform: translate(0, 0) scale(1) rotate(360deg);
-    background-color: #6bd170; } }
-
-.anim-vert {
-  animation: 1.4s 0.2s linear;
-  animation-name: u9ac8ad1e; }
-
-@keyframes u9ac8ad1e {
-  30% {
-    transform: rotate(0deg); }
-  60% {
-    transform: rotate(45deg); }
-  100% {
-    transform: rotate(90deg); } }
-
-.animationbtn {
-  animation: 1.4s 0.2s linear;
-  animation-name: u1304544a; }
-
-@keyframes u1304544a {
-  20% {
-    transform: rotate(90deg) scale(0.9); }
-  50% {
-    transform: rotate(180deg) scale(-0.8); }
-  80% {
-    transform: rotate(270deg) scale(0.8); }
-  90%, 100% {
-    transform: rotate(360deg) scale(1); } }
-
-.ul-list {
-  opacity: 0; }
-
-header {
-  position: absolute;
-  z-index: 99; }
-  header .nav-main {
-    position: relative;
-    margin-right: -15px;
-    margin-left: -15px; }
-    header .nav-main .social-networks {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 1em; }
-      header .nav-main .social-networks ul {
-        list-style-type: none; }
-        header .nav-main .social-networks ul li {
-          display: inline-flex;
-          justify-content: space-between;
-          margin: 1em; }
-          header .nav-main .social-networks ul li a {
-            font-size: 35px; }
-            header .nav-main .social-networks ul li a:hover {
-              color: #fff; }
-    header .nav-main .nav-btn {
-      display: flex;
-      flex-direction: row;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: none;
-      outline: none;
-      background: transparent;
-      margin: 1em; }
-      header .nav-main .nav-btn .vert {
-        display: flex;
-        flex-direction: column; }
-        header .nav-main .nav-btn .vert span {
-          display: block;
-          width: 10px;
-          height: 10px;
-          margin: 6px 7px;
-          background: #000;
-          border-radius: 50%;
-          border: 1px solid #19a279; }
-    header .nav-main .wrapp-nav {
-      position: relative; }
-      header .nav-main .wrapp-nav ul {
-        padding-left: 12px;
-        width: 350px;
-        max-width: 100%;
-        list-style-type: none; }
-        header .nav-main .wrapp-nav ul li {
-          width: 0;
-          margin: 0;
-          padding: 1em;
-          background: transparent;
-          border-bottom: 1px solid transparent; }
-          header .nav-main .wrapp-nav ul li:hover {
-            width: 100%;
-            transition: width 0.1s;
-            background: rgba(0, 0, 0, 0.5);
-            border-bottom: 1px solid #19a279; }
-          header .nav-main .wrapp-nav ul li:hover a {
-            color: #19a279; }
-          header .nav-main .wrapp-nav ul li a {
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #fff; }
-
-.active {
-  color: #fff; }
-section, div, a, li, input, textarea, label {
+@import url(https://fonts.googleapis.com/css?family=Roboto);section, div, a, li, input, textarea, label {
   outline: none !important; }
 
 h1 {
@@ -496,7 +331,7 @@ footer {
   margin: 1em 0; }
 
 .sub-context {
-  color: #ffffff; }
+  color: #000; }
   .sub-context ul {
     list-style-type: none;
     padding-left: 0; }
@@ -537,6 +372,12 @@ footer {
     font-size: 18px;
     max-width: 400px;
     line-height: 1.3; }
+  .swiper-container .text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600; }
+
+.swiper-button-prev, .swiper-button-next {
+  color: #000000 !important; }
 
 .bnt-up {
   position: fixed;
@@ -551,6 +392,25 @@ footer {
 
 .show {
   opacity: 1; }
+
+/*msg*/
+.msg-body {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  width: 300px;
+  height: 100px;
+  background: #4285F4;
+  color: #fff;
+  padding: 0.5em;
+  font-family: 'Lato', sans-serif;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 2s;
+  z-index: 99999; }
+
+.msg-body p {
+  font-size: 14px; }
 
 @media (min-width: 320px) and (max-width: 1024px) {
   .content > div.col-md-12 {
@@ -573,4 +433,173 @@ footer {
   .social-networks {
     margin: 0 !important; }
     .social-networks ul li {
-      margin: 0.2em !important; } }
+      margin: 0.2em !important; }
+  .msg-body {
+    width: 200px; }
+    .msg-body p {
+      font-size: 18px; } }
+.loaderArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1D1F20;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000; }
+
+.loader {
+  position: relative;
+  background-color: #B9E9BB;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  animation: 1.4s linear infinite;
+  animation-name: u9da168a6; }
+
+@keyframes u9da168a6 {
+  20% {
+    transform: rotate(-30deg) scale(1); }
+  50% {
+    transform: rotate(360deg) scale(4);
+    background-color: white; }
+  80% {
+    transform: rotate(720deg) scale(0.8); }
+  90%, 100% {
+    transform: rotate(720deg) scale(1);
+    background-color: #B9E9BB; } }
+  .loader:before, .loader:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #6bd170;
+    border-radius: 3px; }
+  .loader:before {
+    right: calc(100% + 2px);
+    animation: 1.4s 0.2s ease infinite;
+    animation-name: ua5bde5f2; }
+
+@keyframes ua5bde5f2 {
+  65% {
+    transform: translate(-200%, -100%) scale(0.2) rotate(-180deg);
+    background-color: white; }
+  70%, 100% {
+    transform: translate(0, 0) scale(1) rotate(-360deg);
+    background-color: #6bd170; } }
+  .loader:after {
+    left: calc(100% + 2px);
+    animation: 1.4s 0.2s ease infinite;
+    animation-name: u1308d287; }
+
+@keyframes u1308d287 {
+  65% {
+    transform: translate(200%, 100%) scale(0.2) rotate(180deg);
+    background-color: white; }
+  70%, 100% {
+    transform: translate(0, 0) scale(1) rotate(360deg);
+    background-color: #6bd170; } }
+
+.anim-vert {
+  animation: 1.4s 0.2s linear;
+  animation-name: u64d1e7ae; }
+
+@keyframes u64d1e7ae {
+  30% {
+    transform: rotate(0deg); }
+  60% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(90deg); } }
+
+.animationbtn {
+  animation: 1.4s 0.2s linear;
+  animation-name: u81d66d5f; }
+
+@keyframes u81d66d5f {
+  20% {
+    transform: rotate(90deg) scale(0.9); }
+  50% {
+    transform: rotate(180deg) scale(-0.8); }
+  80% {
+    transform: rotate(270deg) scale(0.8); }
+  90%, 100% {
+    transform: rotate(360deg) scale(1); } }
+
+.ul-list {
+  opacity: 0; }
+
+header {
+  position: absolute;
+  z-index: 99; }
+  header .nav-main {
+    position: relative;
+    margin-right: -15px;
+    margin-left: -15px; }
+    header .nav-main .social-networks {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 1em; }
+      header .nav-main .social-networks ul {
+        list-style-type: none; }
+        header .nav-main .social-networks ul li {
+          display: inline-flex;
+          justify-content: space-between;
+          margin: 1em; }
+          header .nav-main .social-networks ul li a {
+            font-size: 35px; }
+            header .nav-main .social-networks ul li a:hover {
+              color: #fff; }
+    header .nav-main .nav-btn {
+      display: flex;
+      flex-direction: row;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      background: transparent;
+      margin: 1em; }
+      header .nav-main .nav-btn .vert {
+        display: flex;
+        flex-direction: column; }
+        header .nav-main .nav-btn .vert span {
+          display: block;
+          width: 10px;
+          height: 10px;
+          margin: 6px 7px;
+          background: #000;
+          border-radius: 50%;
+          border: 1px solid #19a279; }
+    header .nav-main .wrapp-nav {
+      position: relative; }
+      header .nav-main .wrapp-nav ul {
+        padding-left: 12px;
+        width: 350px;
+        max-width: 100%;
+        list-style-type: none; }
+        header .nav-main .wrapp-nav ul li {
+          width: 0;
+          margin: 0;
+          padding: 1em;
+          background: transparent;
+          border-bottom: 1px solid transparent; }
+          header .nav-main .wrapp-nav ul li:hover {
+            width: 100%;
+            transition: width 0.1s;
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid #19a279; }
+          header .nav-main .wrapp-nav ul li:hover a {
+            color: #19a279; }
+          header .nav-main .wrapp-nav ul li a {
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff; }
+
+.active {
+  color: #fff; }

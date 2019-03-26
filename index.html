@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:300" rel="stylesheet">
     <title>Front-end developer portfolio</title>
 </head>
 <body>
@@ -43,10 +44,10 @@
         </div>
         <div class="social-networks">
             <ul>
-                <li><a href="http://facebook.com/andrew.tolochkevich"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="http://www.linkedin.com/in/andrew-tolochkevich-a598ba130"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://telegram.org/a_tolochkevich"><i class="fab fa-telegram"></i></a></li>
-                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a target="_blank" href="http://facebook.com/andrew.tolochkevich"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a target="_blank" href="http://www.linkedin.com/in/andrew-tolochkevich-a598ba130"><i class="fab fa-linkedin"></i></a></li>
+                <li><a target="_blank" href="https://telegram.org/a_tolochkevich"><i class="fab fa-telegram"></i></a></li>
+                <li><a target="_blank" href="https://github.com/Alan4101"><i class="fab fa-github"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -72,11 +73,10 @@
                         <div class="title-s text-center">
                             <h2>About</h2>
                         </div>
-                        <div class="parallax-bg" style="background-image:url(src/public/img/timeline.jpg)" data-swiper-parallax="-23%"></div>
                         <div class="swiper-wrapper container">
                             <div class="swiper-slide">
                                 <div class="container text-animated">
-                                    <div class="subtitle animated">Hi, my name is Andrew and I Front-end developer. </div>
+                                    <div class="subtitle animated">Hi, my name is Andrew and I`m Front-end developer. </div>
                                     <!--<hr>-->
                                     <div class="text animated">
                                         <p>I have 2 years experience in web development.My main responsibilities is layout of new pages from PSD layouts
@@ -84,33 +84,31 @@
                                             Implementation of JavaScript logic (sliders, popups, animations, AJAX, etc.)
                                             Integration of new modules into finished projects</p>
                                     </div>
-                                    <div class="sub-context animated">
-                                        <ul>
-                                            <li><i class="fab fa-js"></i></li>
-                                            <li><i class="fab fa-css3-alt"></i></li>
-                                            <li><i class="fab fa-html5"></i></li>
-                                            <li><img src="src/public/img/icons8-jquery-filled-50.png"></li>
-                                            <li><i class="fab fa-node"></i></li>
-                                            <li><i class="fab fa-npm"></i></li>
-                                            <li><i class="fab fa-wordpress-simple"></i></li>
-                                            <li><i class="fab fa-adobe"></i></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Slide 2</div>
-                                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                                <div class="text" data-swiper-parallax="-100">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                                <div class="subtitle" >Skills and technology</div>
+                                <div class="sub-context ">
+                                    <ul>
+                                        <li><i class="fab fa-js"></i></li>
+                                        <li><i class="fab fa-css3-alt"></i></li>
+                                        <li><i class="fab fa-html5"></i></li>
+                                        <li><i class="fab fa-node"></i></li>
+                                        <li><i class="fab fa-npm"></i></li>
+                                        <li><i class="fab fa-wordpress-simple"></i></li>
+                                        <li class="icon-p jqery-icon"></li>
+                                        <li class="icon-p git-icon"></li>
+                                        <li class="icon-p db-icon"></li>
+                                        <li><i class="fab fa-adobe"></i></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <!-- Add Pagination -->
-                        <div class="swiper-pagination swiper-pagination-white"></div>
+                        <div style="display: none;" class="swiper-pagination swiper-pagination-white"></div>
                         <!-- Add Navigation -->
-                        <div class="swiper-button-prev swiper-button-white "></div>
-                        <div class="swiper-button-next swiper-button-white "></div>
+                        <div class="swiper-button-prev swiper-button-black "></div>
+                        <div class="swiper-button-next swiper-button-black "></div>
 
                     </div>
                 </div>
@@ -122,14 +120,14 @@
                 <div class="title-s text-center">
                     <h2>Work</h2>
                 </div>
-                <div class="work-content flex-r0 flex-wrapp">
+                <div class="container work-content flex-r0 flex-wrapp">
                     <div class="col-lg-3 col-md-3 col-sm-12 work-item animated">
                         <figure>
                             <span><i class="far fa-comments"></i></span>
                             <figcaption>
-                                <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Aspernatur culpa cum cupiditate dicta est expedita. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                                <h3>Discussion</h3>
+                                <p>The basis of the application being created? The main tasks of the site? The target audience?
+                                    What results do you want to get with it? The main theme? Answers to these and other questions determine what our product will be.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -137,9 +135,9 @@
                         <figure>
                             <span><i class="far fa-file-alt"></i></span>
                             <figcaption>
-                                <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita.
-                                    Aspernatur culpa cum cupiditate dicta est expedita.
+                                <h3>Concept creation</h3>
+                                <p>Where is it more convenient to place the design elements of the site? How to make navigation as easy and convenient as possible? How to achieve maximum usability.
+                                    Solving these issues leads to the appearance of several design options.
                                 </p>
                             </figcaption>
                         </figure>
@@ -148,8 +146,9 @@
                         <figure>
                             <span><i class="fab fa-free-code-camp"></i></span>
                             <figcaption>
-                                <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa cum cupiditate dicta est expedita. Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                                <h3>Development</h3>
+                                <p>Wow! This is the most desperate stage. On which code, pedal, program, saw the code, swear happens ...
+                                    As a result, we get a beautiful, cross-browser, adaptive, fast user-friendly site.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -157,10 +156,8 @@
                         <figure>
                             <span><i class="far fa-thumbs-up"></i></span>
                             <figcaption>
-                                <h3>title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Aspernatur culpa cum cupiditate dicta est expedita.
-                                    Aspernatur culpa cum cupiditate dicta est expedita.</p>
+                                <h3>Satisfied customer</h3>
+                                <p>It remains only to enjoy the result. To fill the client with thematic content a resource for further prosperity and promotion of his business in the network.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -197,20 +194,20 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="text-content">
-                                <h3>Project</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores consectetur deleniti doloribus fugiat id illum impedit ipsa laborum</p>
+                                <h3>Landing page - Portfolio</h3>
+                                <p>This landing page is site portfolio, I had created the layout of the site, also used to create the backend NodeJs and MongoDB</p>
                                 <hr>
                                 <h5>Technology</h5>
                                 <ul>
                                     <li>JS</li>
-                                    <li>jQuery</li>
                                     <li>Html&Css</li>
-                                    <li>Wordpress</li>
+                                    <li>NodeJs</li>
                                     <li>Webpack</li>
                                     <li>Npm</li>
+                                    <li>MongoDb</li>
                                 </ul>
                                 <hr>
-                                <a class="btn-detail" href="#">Detail</a>
+                                <a class="btn-detail" target="_blank" href="https://github.com/Alan4101/portfolioNodeJSExpressMongoDB">Detail</a>
                             </div>
                         </div>
                     </div>
@@ -347,19 +344,19 @@
                     <form name="contact" method="">
                         <div class="form-group pd">
                             <label for="forName" class="bmd-label-floating"><i class="far fa-user"></i>  Name</label>
-                            <input type="text" name="name" class="form-control" id="forName" pattern="[A-Z,a-z, ]*">
+                            <input type="text" name="name" class="form-control" id="forName" pattern="[A-Z,a-z, ]*" placeholder="Andrew" required>
                         </div>
                         <div class="form-group bmd-form-group pd">
                             <label for="forEmail" class="bmd-label-floating"> <i class="far fa-envelope"></i>  Email</label>
-                            <input type="email" name="email" class="form-control" id="forEmail">
+                            <input type="email" name="email" class="form-control" id="forEmail" placeholder="example@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                         </div>
                         <div class="form-group bmd-form-group pd">
                             <label for="forPhone" class="bmd-label-floating"><i class="fas fa-mobile-alt"></i>  Phone</label>
-                            <input type="email" name="email" class="form-control" id="forPhone" pattern="-?[0-9]*(\.[0-9]+)?">
+                            <input type="tel" name="phone" class="form-control" id="forPhone" pattern="-?[0-9]*(\.[0-9]+)?" placeholder="098 987 32 12" required>
                         </div>
                         <div class="form-group bmd-form-group pd">
                             <label for="forText" class="bmd-label-floating"><i class="fas fa-pencil-alt"></i> Your message</label>
-                            <textarea class="form-control" name="text" id="forText" cols="30" rows="10"></textarea>
+                            <textarea class="form-control" name="text" id="forText" cols="30" rows="10" placeholder="Your message" required></textarea>
                         </div>
                         <div class="cont-block">
                             <button id="send_message" type="button" class="btn-m">Send  </button>

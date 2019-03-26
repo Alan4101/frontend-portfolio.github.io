@@ -16,3 +16,18 @@
     left:0;
     background: rgba(0,0,0,0.2);
 }
+.icon-p{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    margin: 0;
+}
+.jqery-icon{
+    background-image: url('img/icon/logo.png');
+}
+.git-icon{
+    background-image: url('img/icon/github.png');
+}
+.db-icon{
+    background-image: url('img/icon/db.png');
+}
