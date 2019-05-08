@@ -191,14 +191,14 @@ function scrollUp() {
     (function scroll () {
         if(window.pageYOffset > 0){
             window.scrollBy(0, -10);
-            setTimeout(scroll,0);
+            setTimeout(scroll, 0);
         }
     })();
 }
 
 let showBtnUp = ()=>{
     const wCord = document.documentElement.clientHeight;
-    return window.pageYOffset>wCord?btnUp.classList.add('show'):btnUp.classList.remove('show');
+    return window.pageYOffset>wCord ? btnUp.classList.add('show') : btnUp.classList.remove('show');
 };
 
 document.getElementById('send_message').addEventListener('click', validate);
@@ -221,6 +221,7 @@ function validate() {
 function reset(form) {
     form.reset();
 }
+
 document.querySelector('#forPhone').onkeypress = function (e) {
     e = e || window.event;
     if(e.charCode && (e.charCode < 48 || e.charCode > 57)){
@@ -228,49 +229,47 @@ document.querySelector('#forPhone').onkeypress = function (e) {
     }
 };
 
-
-
-
 window.addEventListener('scroll', showBtnUp);
 
-btnUp.addEventListener('click',scrollUp);
+btnUp.addEventListener('click', scrollUp);
 
 btnDown.addEventListener('click', scrollDown);
 //header nav
+
 function navListAnimation(f) {
     if(f){
-        navList.forEach((el,i)=>{
-            setTimeout(()=>{
-                el.classList.remove('slideOutLeft');
-                el.classList.add('animated','slideInLeft');
-            },i*150);
+        navList.forEach( el =>{
+            el.classList.toggle('active__nav');
+            el.classList.remove('hide__nav');
+            document.querySelector('.body').classList.add('dark__body');
         });
-    }else{
-        navList.forEach((el,i)=>{
-            setTimeout(()=>{
-                el.classList.add('animated','slideOutLeft');
-                el.classList.remove('slideInLeft');
-            },i*50);
+    }else {
+        navList.forEach( el =>{
+            el.classList.toggle('active__nav');
+            el.classList.add('hide__nav');
+            document.querySelector('.body').classList.remove('dark__body');
+
+
         });
     }
 
 }
 
 navBtn.addEventListener('click',()=>{
-    let t = navList[0].parentNode;
+    // let t = navList[0].parentNode;
 
     if(flag){
-        setTimeout(()=> t.style.opacity = '1' ,800);
-        navBtn.classList.add('animationbtn');
-       navListAnimation(flag);
-
-       flag = false;
+        // setTimeout(()=> t.style.opacity = '1' ,800);
+        // t.style.opacity = '1';
+        navListAnimation(flag);
+        flag = false;
    }else {
-       navBtn.classList.remove('animationbtn');
-       navListAnimation(flag);
+        navListAnimation(flag);
+        // setTimeout(()=> t.style.opacity = '0' ,700);
         flag = true;
-        setTimeout(()=> t.style.opacity = '0' ,700);
 
     }
+    navBtn.classList.add('animationbtn');
+    setTimeout(()=> navBtn.classList.remove('animationbtn'),2000);
 });
 

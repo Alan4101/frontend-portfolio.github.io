@@ -428,8 +428,6 @@ footer {
     bottom: 20px; }
   .swiper-container .swiper-slide {
     padding: 0; }
-  .ul-list {
-    background: rgba(0, 0, 0, 0.8); }
   .social-networks {
     margin: 0 !important; }
     .social-networks ul li {
@@ -459,9 +457,9 @@ footer {
   height: 12px;
   border-radius: 3px;
   animation: 1.4s linear infinite;
-  animation-name: u9da168a6; }
+  animation-name: u3a7fda40; }
 
-@keyframes u9da168a6 {
+@keyframes u3a7fda40 {
   20% {
     transform: rotate(-30deg) scale(1); }
   50% {
@@ -482,9 +480,9 @@ footer {
   .loader:before {
     right: calc(100% + 2px);
     animation: 1.4s 0.2s ease infinite;
-    animation-name: ua5bde5f2; }
+    animation-name: u9197d668; }
 
-@keyframes ua5bde5f2 {
+@keyframes u9197d668 {
   65% {
     transform: translate(-200%, -100%) scale(0.2) rotate(-180deg);
     background-color: white; }
@@ -494,9 +492,9 @@ footer {
   .loader:after {
     left: calc(100% + 2px);
     animation: 1.4s 0.2s ease infinite;
-    animation-name: u1308d287; }
+    animation-name: uda5e3af4; }
 
-@keyframes u1308d287 {
+@keyframes uda5e3af4 {
   65% {
     transform: translate(200%, 100%) scale(0.2) rotate(180deg);
     background-color: white; }
@@ -506,9 +504,9 @@ footer {
 
 .anim-vert {
   animation: 1.4s 0.2s linear;
-  animation-name: u64d1e7ae; }
+  animation-name: u2f840b52; }
 
-@keyframes u64d1e7ae {
+@keyframes u2f840b52 {
   30% {
     transform: rotate(0deg); }
   60% {
@@ -518,9 +516,9 @@ footer {
 
 .animationbtn {
   animation: 1.4s 0.2s linear;
-  animation-name: u81d66d5f; }
+  animation-name: u2547e908; }
 
-@keyframes u81d66d5f {
+@keyframes u2547e908 {
   20% {
     transform: rotate(90deg) scale(0.9); }
   50% {
@@ -530,8 +528,24 @@ footer {
   90%, 100% {
     transform: rotate(360deg) scale(1); } }
 
-.ul-list {
-  opacity: 0; }
+.ul-list > li {
+  margin-left: -500px;
+  transition: .2s ease-out;
+  z-index: 9999; }
+
+.active__nav {
+  margin-left: 0 !important; }
+
+.hide__nav {
+  transition: .2s ease-in; }
+
+.dark__body:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.8);
+  z-index: 99; }
 
 header {
   position: absolute;
@@ -585,7 +599,6 @@ header {
         list-style-type: none; }
         header .nav-main .wrapp-nav ul li {
           width: 0;
-          margin: 0;
           padding: 1em;
           background: transparent;
           border-bottom: 1px solid transparent; }
