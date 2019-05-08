@@ -178,8 +178,18 @@ form {
   width: 100%;
   text-align: center; }
 
+.monitor {
+  overflow: hidden; }
+
 .desktop img {
   max-width: 100%; }
+
+.monitor:hover img {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  -o-transform: scale(0.98);
+  transform: scale(0.98); }
 
 .block-project {
   justify-content: space-between;
