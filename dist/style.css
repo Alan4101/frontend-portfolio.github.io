@@ -589,7 +589,8 @@ header {
       outline: none;
       background: transparent;
       margin: 1em;
-      padding: 1.9rem;}
+      position: relative; 
+      top: 1.9rem;}
       header .nav-main .nav-btn .vert {
         display: flex;
         flex-direction: column; }
